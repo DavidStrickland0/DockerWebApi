@@ -7,7 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DockerWebApi", "DockerWebAp
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{264E619D-F6E2-4AFC-A0AA-83163883A247}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerWebApiLib", "DockerWebApiLib\DockerWebApiLib.csproj", "{7E69AA53-A1D3-44E8-85EB-C5FA446F819E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DockerWebApiLib", "DockerWebApiLib\DockerWebApiLib.csproj", "{7E69AA53-A1D3-44E8-85EB-C5FA446F819E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4372DEB7-0CAC-431A-A529-627A81EEA51D}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.md = ReadMe.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
