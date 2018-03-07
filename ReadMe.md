@@ -55,7 +55,7 @@ This sample has a AspNetCore 2.0 Docker config file. Download the code.
 
  docker exec DockerWebApi ipconfig
 
- <Record the IP Address>
+ !Record the IP Address!
   
   Open your browser and navigate to http://recordedIpAddress/swagger
   
