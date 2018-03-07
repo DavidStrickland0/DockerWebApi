@@ -38,7 +38,9 @@ _Docker (optional - see below)_
 
 ## Deviations
 Took a couple deviations from the defined requirements. 
-First is the quite obvious deviation that I used C# instead of Java thus not using Spring Boot and Gradle. The provided Docker File is also a windows Docker instead of a alpine Linux docker file mostly because I cant seem to get linux to run on my system currently. Seems to be the known bug about passwords with funcky characters and didnt really want to change my password just for this sample app.
+First is the quite obvious deviation that I used C# instead of Java thus not using Spring Boot and Gradle. 
+
+The provided Docker File is also a windows Docker instead of a alpine Linux docker file mostly because I cant seem to get linux to run on my system currently. Seems to be the known bug about passwords with funcky characters and didnt really want to change my password just for this sample app.
 
 
   
