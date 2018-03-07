@@ -42,5 +42,18 @@ First is the quite obvious deviation that I used C# instead of Java thus not usi
 
 The provided Docker File is also a windows Docker instead of a alpine Linux docker file mostly because I cant seem to get linux to run on my system currently. Seems to be the known bug about passwords with funcky characters and didnt really want to change my password just for this sample app.
 
+## Running the Sample
+This sample has a AspNetCore 2.0 Docker config file. Download the code.
 
+ cd dockerwebapi
+
+ docker build -t dockerwebapi .
+
+ docker run -it --rm --name DockerWebApi dockerwebapi
+
+ docker exec DockerWebApi ipconfig
+
+ <Record the IP Address>
+  
+  Open your browser and navigate to http://recordedIpAddress/swagger
   
