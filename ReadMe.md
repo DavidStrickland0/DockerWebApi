@@ -42,6 +42,8 @@ First is the quite obvious deviation that I used C# instead of Java thus not usi
 
 The provided Docker File is also a windows Docker instead of a alpine Linux docker file mostly because I cant seem to get linux to run on my system currently. Seems to be the known bug about passwords with funcky characters and didnt really want to change my password just for this sample app.
 
+Didnt get to the Integration tests. The Logic is seperated out so Unit Tests would be fairly easy to add but didnt get it done spent to much time fighting with Docker trying to get a linux image to work. 
+
 ## Running the Sample
 This sample has a AspNetCore 2.0 Docker config file. Download the code.
 
@@ -57,3 +59,8 @@ This sample has a AspNetCore 2.0 Docker config file. Download the code.
   
   Open your browser and navigate to http://recordedIpAddress/swagger
   
+## Some Considerations
+
+The time endpoint likely should be cached or we could end up beating the third parties api to death. However that depends on why we are using a third party time source instead of just doing it locally. If the offset between thier time and the server time truely is that important then we could get the offset between the server time and the rest call time and then just do the math locally for the timezone and add the offset. Only going out a few times a minute to recalculate the offset. Would need more details on why this is being requested before I would be able to derive the best caching solution... if any.
+
+Whether we secure this API with an API key and a registration system would be a business decision. Adding a Key raises the commitment bar but provides a way to perform throttling however if the APIKey registration process is to easy it can just be automated and throttling by key becomes meaningless since a new key is easy to programtically get. A robust ApiKey issue process is likely going to be harder to build and maintain then the API at this point so in the end more information would be needed to derive whether an APIKey is needed or justified.
